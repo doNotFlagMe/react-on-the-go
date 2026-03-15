@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import './Country.css';
 
-const Country = ({country}) => {
+const Country = ({country, handleVisitedCountries}) => {
     // const {countryName} = {country.name.common}
     const [visited, setVisited] = useState(false);
 
     const handleVisited = ()=>{
         // console.log('button clicked')
         setVisited(!visited); // keep this line I have qn
+        handleVisitedCountries(country);
     }
 
     return ( 
